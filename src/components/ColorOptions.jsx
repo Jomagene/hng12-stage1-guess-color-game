@@ -11,7 +11,7 @@ const ColorOptions = ({ trueChoice, setScore, score }) => {
   function handleClick(event, index) {
     const target = event.target;
     const classToAdd = trueChoice == index ? 'green' : 'red';
-    setStatusGame(trueChoice == index ? 'Bravo' : 'Try again');
+    setStatusGame(trueChoice == index ? 'Bravo 😁' : 'Try again 😓');
 
     target.classList.add(classToAdd);
 
