@@ -11,7 +11,7 @@ const Play = () => {
 
   return (
     <div className="main play">
-      <Header />
+      <Header setScore={setScore} score={score} />
       <Instruction trueChoice={trueChoice} score={score} />
       <ColorOptions trueChoice={trueChoice} setScore={setScore} score={score} />
       <h1>Votre score est : {score}</h1>

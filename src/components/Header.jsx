@@ -2,10 +2,11 @@ import { useState } from 'react';
 import Countdown from 'react-countdown';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ setScore, score }) => {
   const [countdownDate, setCountdownDate] = useState(Date.now() + 60000);
   const resetTimer = () => {
     setCountdownDate(Date.now() + 60000);
+    setScore(0);
   };
 
   const renderer = ({ minutes, seconds, completed }) => {
