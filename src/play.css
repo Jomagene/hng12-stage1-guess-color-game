@@ -1,0 +1,36 @@
+.play {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  display: flex;
+  width: 80vw;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 0;
+  border-bottom: 0.5px solid grey;
+
+  img {
+    height: 7vw;
+    min-height: 1.5rem;
+    max-height: 3rem;
+  }
+
+  img.logo {
+    height: 10vw;
+    min-height: 2rem;
+    max-height: 4rem;
+  }
+
+  nav {
+    display: flex;
+    gap: 0.5rem;
+  }
+  p {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}

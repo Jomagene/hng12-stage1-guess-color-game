@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <header>
-      <img src="/gameTitle.png" alt="" />
+      <img src="/gameTitle.png" alt="" className="logo" />
       <nav>
         <img src="/reset-btn.png" alt="" />
         <img src="/quit-btn.png" alt="" />
