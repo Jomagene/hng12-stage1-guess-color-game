@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Countdown from 'react-countdown';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [countdownDate, setCountdownDate] = useState(Date.now() + 60000);
@@ -21,13 +22,22 @@ const Header = () => {
 
   return (
     <header>
-      <img src="/gameTitle.png" alt="" className="logo" />
-      <nav>
-        <img src="/reset-btn.png" alt="" onClick={resetTimer} />
-        <img src="/quit-btn.png" alt="" />
-      </nav>
+      <Link to="/">
+        <img src="/gameTitle.png" alt="" className="logo" />
+      </Link>
+      <img
+        src="/reset-btn.png"
+        alt=""
+        onClick={resetTimer}
+        className="pointer"
+      />
       <p>
-        Time: <Countdown date={countdownDate} renderer={renderer} />
+        Time :{' '}
+        <Countdown
+          key={countdownDate}
+          date={countdownDate}
+          renderer={renderer}
+        />
       </p>
     </header>
   );

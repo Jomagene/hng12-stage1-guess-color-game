@@ -6,20 +6,22 @@
 header {
   display: flex;
   width: 80vw;
+  min-width: 280px;
   max-width: 1200px;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2rem 0;
+  padding: 2% 3% 0;
   border-bottom: 0.5px solid grey;
+  background-color: rgba(54, 54, 54, 0.62);
 
   img {
-    height: 7vw;
+    height: 6vw;
     min-height: 1.5rem;
     max-height: 3rem;
   }
 
   img.logo {
-    height: 10vw;
+    height: 8vw;
     min-height: 2rem;
     max-height: 4rem;
   }
@@ -31,6 +33,16 @@ header {
   p {
     color: white;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 3vw;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 50rem) {
+  header p {
+    font-size: 25px;
   }
 }
