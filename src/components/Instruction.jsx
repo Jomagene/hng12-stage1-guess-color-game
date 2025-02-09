@@ -1,5 +1,4 @@
-import colors from '../colors';
-import { colorList } from '../colors';
+import colors, { colorList } from '../colors';
 
 const Instruction = ({ trueChoice, score }) => {
   const colorIndex = (score / 5) % colorList.length;
