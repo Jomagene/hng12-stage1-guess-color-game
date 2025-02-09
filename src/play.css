@@ -33,16 +33,63 @@ header {
   p {
     color: white;
     font-weight: bold;
-    font-size: 3vw;
   }
 
   .pointer {
     cursor: pointer;
   }
 }
+.instruction {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.true-choice {
+  height: 3rem;
+  width: 7rem;
+  display: inline-block;
+  border-radius: 10px;
+  animation: pulse infinite 1.5s;
+}
+
+.choices {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.choice {
+  height: 8rem;
+  width: 8rem;
+  display: inline-block;
+}
+
+.choice-border {
+  height: 4rem;
+  width: 8rem;
+  border: 1px solid;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
 
 @media (min-width: 50rem) {
-  header p {
-    font-size: 25px;
+  * {
+    font-size: 20px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
   }
 }

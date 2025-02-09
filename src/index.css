@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  color: white;
+  font-size: 3vw;
 }
 #root {
   min-height: 100vh;
@@ -32,16 +34,4 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.025);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
