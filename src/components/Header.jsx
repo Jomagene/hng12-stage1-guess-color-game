@@ -2,7 +2,10 @@ import { useState } from 'react';
 import Countdown from 'react-countdown';
 
 const Header = () => {
-  const [countdownDate] = useState(Date.now() + 30000);
+  const [countdownDate, setCountdownDate] = useState(Date.now() + 60000);
+  const resetTimer = () => {
+    setCountdownDate(Date.now() + 60000);
+  };
 
   const renderer = ({ minutes, seconds, completed }) => {
     if (completed) {
@@ -20,7 +23,7 @@ const Header = () => {
     <header>
       <img src="/gameTitle.png" alt="" className="logo" />
       <nav>
-        <img src="/reset-btn.png" alt="" />
+        <img src="/reset-btn.png" alt="" onClick={resetTimer} />
         <img src="/quit-btn.png" alt="" />
       </nav>
       <p>
