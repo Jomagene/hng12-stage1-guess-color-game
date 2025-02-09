@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+#root {
+  min-height: 100vh;
+  background: url('/bg.jpg') center;
+  background-size: cover;
+}
+
+.main {
+  min-height: 100vh;
+  background-color: #000000d4;
+  display: flex;
+
+  .game-title {
+    width: 50%;
+    max-width: 25rem;
+  }
+  .start {
+    width: 20vw;
+    max-width: 10rem;
+    cursor: pointer;
+    animation: pulse infinite 1.5s;
+
+    &:hover {
+      animation: none;
+    }
+  }
+}
+.home {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
