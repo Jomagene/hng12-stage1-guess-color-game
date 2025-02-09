@@ -6,8 +6,8 @@
 }
 #root {
   min-height: 100vh;
-  background: url('src/assets/bg.jpg') center;
-  background-size: cover;
+  /* background: url('src/assets/bg.jpg') center;
+  background-size: cover; */
 }
 
 .main {
