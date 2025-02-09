@@ -68,3 +68,5 @@ const colors = {
 };
 
 export default colors;
+
+export const colorList = ['red', 'orange', 'yellow', 'green', 'blue', 'cyan'];
