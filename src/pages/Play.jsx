@@ -6,7 +6,6 @@ import '../play.css';
 
 const Play = () => {
   const [score, setScore] = useState(0);
-
   const trueChoice = Math.floor(Math.random() * 8);
 
   return (
@@ -14,7 +13,9 @@ const Play = () => {
       <Header setScore={setScore} score={score} />
       <Instruction trueChoice={trueChoice} score={score} />
       <ColorOptions trueChoice={trueChoice} setScore={setScore} score={score} />
-      <h1>Votre score est : {score}</h1>
+      <h1>
+        Your score is : <span data-testid="score">{score}</span>
+      </h1>
     </div>
   );
 };

@@ -28,7 +28,13 @@ const Header = ({ setScore }) => {
       <Link to="/">
         <img src={gameTitle} alt="" className="logo" />
       </Link>
-      <img src={resetBtn} alt="" onClick={resetTimer} className="pointer" />
+      <img
+        src={resetBtn}
+        alt=""
+        onClick={resetTimer}
+        className="pointer"
+        data-testid="newGameButton"
+      />
       <p>
         Time :{' '}
         <Countdown

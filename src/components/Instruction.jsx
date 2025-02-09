@@ -6,13 +6,16 @@ const Instruction = ({ trueChoice, score }) => {
 
   return (
     <div className="instruction">
-      <p> Hey! Taste your eyes, can you find this color? : </p>
+      <p data-testid="gameInstructions">
+        Hey! Taste your eyes, can you find this color? :{' '}
+      </p>
       <div className="choice-border" style={{ borderColor: colors[color][0] }}>
         <span
           style={{
             backgroundColor: colors[color][trueChoice],
           }}
-          className="true-choice"></span>
+          className="true-choice"
+          data-testid="colorBox"></span>
       </div>
     </div>
   );
