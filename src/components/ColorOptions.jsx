@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import colors, { colorList } from '../colors';
 
-const ColorOptions = ({ trueChoice, setScore, score }) => {
+const ColorOptions = ({
+  trueChoice,
+  setScore,
+  score,
+  statusGame,
+  setStatusGame,
+}) => {
   const colorIndex = (score / 5) % colorList.length;
   const color = colorList[colorIndex];
-  let [statusGame, setStatusGame] = useState();
 
   const dummyArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
