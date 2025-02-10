@@ -5,9 +5,9 @@ import gameTitle from '../assets/gameTitle.png';
 import resetBtn from '../assets/reset-btn.png';
 
 const Header = ({ score, setScore, setStatusGame }) => {
-  const [countdownDate, setCountdownDate] = useState(Date.now() + 300000);
+  const [countdownDate, setCountdownDate] = useState(Date.now() + 120000);
   const resetTimer = () => {
-    setCountdownDate(Date.now() + 300000);
+    setCountdownDate(Date.now() + 120000);
     setScore(0);
     setStatusGame('');
   };
