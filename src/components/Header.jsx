@@ -14,6 +14,8 @@ const Header = ({ score, setScore, setStatusGame }) => {
 
   const renderer = ({ minutes, seconds, completed }) => {
     if (completed) {
+      const gameOver = new Audio('/sounds/game-over.mp3');
+      gameOver.play();
       return (
         <div className="popup-container">
           <div className="popup">

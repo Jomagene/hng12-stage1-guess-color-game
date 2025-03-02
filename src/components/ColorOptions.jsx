@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import colors, { colorList } from '../colors';
 
 const ColorOptions = ({
@@ -10,12 +9,23 @@ const ColorOptions = ({
 }) => {
   const colorIndex = (score / 5) % colorList.length;
   const color = colorList[colorIndex];
+  const success = new Audio('/sounds/success.mp3');
+  const failurre = new Audio('/sounds/fail.mp3');
 
   const dummyArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   function handleClick(event, index) {
     const target = event.target;
-    const classToAdd = trueChoice == index ? 'green' : 'red';
+    let classToAdd;
+
+    if (trueChoice == index) {
+      success.play();
+      classToAdd = 'green';
+    } else {
+      failurre.play();
+      classToAdd = 'red';
+    }
+
     setStatusGame(trueChoice == index ? 'Bravo 😁' : 'Try again 😓');
 
     target.classList.add(classToAdd);
